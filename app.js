@@ -22,7 +22,7 @@ const clientSecret = "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";
 
 app.use(
   cors({
-    origin: "strideeasebackend.onrender.com",
+    origin: "http://localhost:3000",
     methods: "GET,POST,PUT,DELETE",
     credentials: true,
   })
