@@ -105,6 +105,7 @@ app.get("/login/sucess", async (req, res) => {
     window.alert("login sucessfull");
     res.status(200).json({ message: "login successfull", user: req.user });
   } else {
+    window.alert("login failed")
     res.status(400).json({ message: "login failed" });
   }
 });
