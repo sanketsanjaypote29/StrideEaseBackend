@@ -22,7 +22,7 @@ const clientSecret = "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";
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://stride-ease-frontend-hex9j2vm9-sanketsanjaypote29s-projects.vercel.app",
     methods: "GET,POST,PUT,DELETE",
     credentials: true,
   })
