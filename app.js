@@ -22,7 +22,7 @@ const clientSecret = "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";
 
 app.use(
   cors({
-    origin: "https://stride-ease-frontend.vercel.app/",
+    origin: "https://stride-ease-frontend.vercel.app",
     methods: "GET,POST,PUT,DELETE",
     credentials: true,
   })
@@ -93,8 +93,8 @@ app.get(
 app.get(
   "/auth/google/callback",
   passport.authenticate("google", {
-    successRedirect: "https://stride-ease-frontend.vercel.app//dashboard",
-    failureRedirect: "https://stride-ease-frontend.vercel.app//login",
+    successRedirect: "https://stride-ease-frontend.vercel.app/dashboard",
+    failureRedirect: "https://stride-ease-frontend.vercel.app/login",
   })
 );
 
@@ -113,7 +113,7 @@ app.get("/logout", (req, res, next) => {
       return next(err);
     }
   });
-  res.redirect("https://stride-ease-frontend.vercel.app//");
+  res.redirect("https://stride-ease-frontend.vercel.app/");
 });
 app.listen(PORT, () => {
   console.log(`server started at port no ${PORT}`);
