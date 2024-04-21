@@ -102,6 +102,7 @@ app.use("/api", require("./routes/auth"));
 
 app.get("/login/sucess", async (req, res) => {
   if (req.user) {
+    window.alert("login sucessfull");
     res.status(200).json({ message: "login successfull", user: req.user });
   } else {
     res.status(400).json({ message: "login failed" });
