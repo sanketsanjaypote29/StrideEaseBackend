@@ -93,8 +93,8 @@ app.get(
 app.get(
   "/auth/google/callback",
   passport.authenticate("google", {
-    successRedirect: "http://localhost:3000/dashboard",
-    failureRedirect: "http://localhost:3000/login",
+    successRedirect: "https://stride-ease-frontend-hex9j2vm9-sanketsanjaypote29s-projects.vercel.app/dashboard",
+    failureRedirect: "https://stride-ease-frontend-hex9j2vm9-sanketsanjaypote29s-projects.vercel.app/login",
   })
 );
 
@@ -113,7 +113,7 @@ app.get("/logout", (req, res, next) => {
       return next(err);
     }
   });
-  res.redirect("http://localhost:3000/");
+  res.redirect("https://stride-ease-frontend-hex9j2vm9-sanketsanjaypote29s-projects.vercel.app/");
 });
 app.listen(PORT, () => {
   console.log(`server started at port no ${PORT}`);
