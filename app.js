@@ -100,7 +100,7 @@ app.get(
 
 app.use("/api", require("./routes/auth"));
 
-app.get("/login/sucess", async (req, res) => {
+app.get("/login/success", async (req, res) => {
   if (req.user) {
     console.log("login sucessfull");
     res.status(200).json({ message: "login successfull", user: req.user });
