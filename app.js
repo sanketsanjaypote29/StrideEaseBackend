@@ -102,10 +102,10 @@ app.use("/api", require("./routes/auth"));
 
 app.get("/login/sucess", async (req, res) => {
   if (req.user) {
-    window.alert("login sucessfull");
+    console.log("login sucessfull");
     res.status(200).json({ message: "login successfull", user: req.user });
   } else {
-    window.alert("login failed")
+   console.log("login failed")
     res.status(400).json({ message: "login failed" });
   }
 });
@@ -115,7 +115,7 @@ app.get("/logout", (req, res, next) => {
       return next(err);
     }
   });
-  res.redirect("https://stride-ease-frontend.vercel.app/");
+  res.redirect("https://stride-ease-frontend.vercel.app");
 });
 app.listen(PORT, () => {
   console.log(`server started at port no ${PORT}`);
